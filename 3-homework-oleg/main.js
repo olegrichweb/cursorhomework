@@ -8,13 +8,15 @@ console.log(getMaxDigit(1758954));
 //////FUNCTION 2
 /////////////////////////////////////////////
 const getPowNum = (num, pow) => {
-    let result = 1;
-    result = num;
+    let result = num;
         for(let i=1; i<pow; i++) {
+            if(pow=0) {
+                return 1;
+            } else {
             result *= num;
         };
         return result;
-};
+}};
 console.log(getPowNum(2, 4));
 //////FUNCTION 3
 // Создать функцию, которая форматирует имя, делая первую букву заглавной. ("влад" -> "Влад", "вЛАД" -> "Влад" и так далее);
@@ -28,7 +30,9 @@ console.log(nameToUpperCase('oLEG'));
 //Создать функцию, которая вычисляет сумму оставшуюся после оплаты налога от заработной платы. (Налог = 18% + 1.5% -> 19.5%). Пример: 1000 -> 805
 const sumAfterTax = (value) => {
     const brutto = Number(value);
-    const taxes = (18+1.5)/100;
+    const paidTaxes = 18;
+    const armyTaxes = 1.5;
+    const taxes = (paidTaxes+armyTaxes)/100;
         return (brutto - brutto * taxes).toPrecision();
 };
 console.log((sumAfterTax(1000)));
@@ -37,7 +41,7 @@ console.log((sumAfterTax(1000)));
 const getRandomNumber = (min, max) => {
     const N = Math.ceil(min);
     const M = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (M - N)) + N;
 };
 console.log(getRandomNumber(10, 55));
 //////FUNCTION 6
@@ -62,7 +66,7 @@ const convertMoney = (summ) => {
     if(summ.substring(summ.length - 3).toLowerCase() === 'uah') {
         return parseInt(summ.substring(0, summ.length - 3)) / course + "$";
     } else {
-        return 'Валюта не поддерживаеться'
+        throw new Error(`Валюта не поддерживаеться!`);
     };
 };
 console.log(convertMoney('10000UAH'));
