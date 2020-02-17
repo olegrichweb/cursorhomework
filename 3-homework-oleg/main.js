@@ -9,14 +9,16 @@ console.log(getMaxDigit(1758954));
 /////////////////////////////////////////////
 const getPowNum = (num, pow) => {
     let result = num;
-        for(let i=1; i<pow; i++) {
-            if(pow=0) {
-                return 1;
+            if(pow === 0) {
+        result = 1;
             } else {
+        for(let i=1; i<pow; i++) {
             result *= num;
         };
+    };
         return result;
-}};
+};
+
 console.log(getPowNum(2, 4));
 //////FUNCTION 3
 // Создать функцию, которая форматирует имя, делая первую букву заглавной. ("влад" -> "Влад", "вЛАД" -> "Влад" и так далее);
@@ -39,9 +41,9 @@ console.log((sumAfterTax(1000)));
 //////FUNCTION 5
 //Создать функцию, которая возвращает случайное целое число в диапазоне от N до M. Пример: getRandomNumber(1, 10) -> 5
 const getRandomNumber = (min, max) => {
-    const N = Math.ceil(min);
-    const M = Math.floor(max);
-        return Math.floor(Math.random() * (M - N)) + N;
+    const n = Math.ceil(min);
+    const m = Math.floor(max);
+        return Math.floor(Math.random() * (m - n)) + n;
 };
 console.log(getRandomNumber(10, 55));
 //////FUNCTION 6
