@@ -37,7 +37,7 @@ console.log(marksToStudents);
 //#4
 function getRandomMark(marks){
     const minM = 1;
-    const maxM = 2;
+    const maxM = 5;
     return Math.floor(Math.random() * (maxM + 1 - minM) + minM);
 };
 const rendomMark = getRandomMark(marks);
