@@ -36,18 +36,20 @@ function getAverage(...numbers) {
     const result = numbers.reduce(function(sum, element) {
        if(Number.isInteger(element)) {
         return sum + element;
-       };  
+       } else {
+           return Math.trunc(element) + sum
+       };
     } );
     return result/numbers.length;
 };
-console.log(`Функция нахождения среднего арифметического: ${getAverage(6,5,1,7,9,1,5,8,11,22,14,78)}`);
+console.log(`Функция нахождения среднего арифметического: ${getAverage(6,5.5,1,7,9.7,1,5,8,11,22,14,78)}`);
 
 //4. Создайте функцию getMedian(...numbers) – которая считает медиану всех переданных в неё аргументов. НЕЦЕЛЫЕ ЧИСЛА ИГНОРИРУЮТСЯ
 
 function getMedian(...numbers) {
     let median = 0;
     let propIndex = 0;
-    const sortedNubers = numbers.sort((a, b) => a - b);
+    const sortedNubers = Math.trunc(numbers.sort((a, b) => a - b));
 if(numbers.length % 2 !== 0) {
     propIndex = Math.trunc(numbers.length / 2);
     median = numbers[propIndex];
@@ -63,18 +65,15 @@ console.log(`Функция нахождения медианы чисел: ${ge
 //5. Создайте функцию filterEvenNumbers(...numbers) – которая фильтрует четные числа переданные как аргументы функции
 
 function filterEvenNumbers(...numbers) {
-    const data = numbers.filter(n => n % 2 !== 0);
-    return Array.from(new Set(data));
+    return  numbers.filter(n => n % 2 !== 0);
 };
 console.log(`Функция вывода четных чисел: ${filterEvenNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)}`)
 
 //6. Создайте функцию countPositiveNumbers(...numbers) – которая посчитает количество числел больших 0
 
 function countPositiveNumbers(...numbers) {
-    const data = numbers.filter(n => n > 0);
-    return data.reduce((sum, cur) => {
-        return sum + cur;
-}, 0);
+    const data = numbers.filter(n => n > 0).flat();
+    return data.length;
 };
 console.log(`Функция подсчета суммы чисел, которые больше нуля: ${countPositiveNumbers(-1, 2, 3, 0, -7, -4, -10, 8, -9, 11)}`);
 
