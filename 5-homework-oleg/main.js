@@ -33,12 +33,9 @@ console.log(`Функция "Мода" : ${getModa(1, 1, 1, 5, 7, 5, 2, 1, 7, 8,
 //3.Создайте функцию getAverage(...numbers) – которая считает среднее арифметическое всех переданных в неё аргументов. НЕЦЕЛЫЕ ЧИСЛА ИГНОРИРУЮТСЯ
 
 function getAverage(...numbers) {
-    const result = numbers.reduce(function(sum, element) {
-       if(Number.isInteger(element)) {
+    const data = numbers.filter(n => n === Math.trunc(n));
+    const result = data.reduce(function(sum, element) {
         return sum + element;
-       } else {
-           return Math.trunc(element) + sum
-       };
     } );
     return result/numbers.length;
 };
@@ -80,7 +77,7 @@ console.log(`Функция подсчета суммы чисел, которы
 document.writeln(`<p>Результаты функций:</p>
 <p>Функция на создание массива случайных чисел: ${getRandomArray(5, 11, 30)}</p>
 <p>Функция "Мода" : ${getModa(1, 1, 1, 5, 7, 5, 2, 1, 7, 8, 4)}</p>
-<p>Функция нахождения среднего арифметического: ${getAverage(6,5,1,7,9,1,5,8,11,22,14,78)}</p>
+<p>Функция нахождения среднего арифметического: ${getAverage(6,5.5,1,7,9.7,1,5,8,11,22,14,78)}</p>
 <p>Функция нахождения медианы чисел: ${getMedian(1, 5, 6, 7, 9, 8, 4, 3, 12)}</p>
 <p>Функция вывода четных чисел: ${filterEvenNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)}</p>
 <p>Функция подсчета суммы чисел, которые больше нуля: ${countPositiveNumbers(-1, 2, 3, 0, -7, -4, -10, 8, -9, 11)}</p>`);
