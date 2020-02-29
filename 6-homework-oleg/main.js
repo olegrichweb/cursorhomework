@@ -26,9 +26,8 @@ const students = [{
   //Task #1.
  function getSubjects (students)  {
     const firstSubj = Object.keys(students.subjects);
-    studWsSub = firstSubj.map(function (val) {
-        let subName = val.charAt(0).toUpperCase() + val.slice(1).replace(/\_/, ' ');
-    return subName;
+    const studWsSub = firstSubj.map(function (val) {
+      return val.charAt(0).toUpperCase() + val.slice(1).replace(/\_/, ' ');
      });
      return studWsSub;
  };
@@ -60,7 +59,7 @@ document.writeln(`<p>Информация про студентов: ${getStuden
 //Task #4. 
 function getStudentsNames (students) {
     return students.map(function(getStudents) {
-        let {name} = getStudents;
+        let {name} = studentsNames;
         return name;
     }).sort();
 };
