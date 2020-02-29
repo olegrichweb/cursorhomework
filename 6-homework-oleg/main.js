@@ -58,8 +58,8 @@ document.writeln(`<p>Информация про студентов: ${getStuden
 
 //Task #4. 
 function getStudentsNames (students) {
-    return students.map(function(getStudents) {
-        let {name} = studentsNames;
+    return students.map(function(studName) {
+        let {name} = studName;
         return name;
     }).sort();
 };
