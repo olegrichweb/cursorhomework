@@ -5,11 +5,11 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 
 // №1.
 
-function getSalary (salary) {
+function getMyTaxes (salary) {
     return this.tax * salary;
 };
-console.log(`Налог в указанной стране составляет: ${getSalary.call(ukraine, 3350)}`)
-document.writeln(`Налог, в указанной стране, составляет: ${getSalary.call(ukraine, 3350)}`)
+console.log(`Налог в указанной стране составляет: ${getMyTaxes.call(ukraine, 3350)}`)
+document.writeln(`Налог, в указанной стране, составляет: ${getMyTaxes.call(ukraine, 3350)}`)
 
 // №2
 
