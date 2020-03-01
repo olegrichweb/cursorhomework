@@ -78,7 +78,7 @@ document.writeln(`<p>Лучший студент: ${getBestStudent(students)}</p
 
 function calculateWordLetters(word) {
     const calculateLet = {};
-    for(i=0; i<word.length; i++) {
+    for(let i=0; i<word.length; i++) {
         word[i] in calculateLet ? calculateLet[word[i]] += 1 : calculateLet[word[i]] = 1;4
     };
     return calculateLet;
