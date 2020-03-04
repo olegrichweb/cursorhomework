@@ -68,6 +68,7 @@ class BudgetStudent extends Student {
     timer(){
         setInterval(() => { this.getScholarship()   
         }, 30000);
+        setTimeout(() => clearInterval(this.timer), 150000);
     };
 };
 
