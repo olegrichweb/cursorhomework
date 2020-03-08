@@ -1,0 +1,16 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+#main_block {
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.child_block {
+    height: 50px;
+    width: 50px;
+}
