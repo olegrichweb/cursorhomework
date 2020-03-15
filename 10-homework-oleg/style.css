@@ -1,0 +1,45 @@
+html {
+    background-image: url('img/Oleg_Maestro.jpg');
+    font-size: 10px;
+    background-size: cover;
+}
+
+
+.keys {
+    display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+    .key {
+        border: .4rem solid black;
+        border-radius: .5rem;
+        margin: 1rem;
+        font-size: 1.5rem;
+        padding: 1rem .5rem;
+        transition: all .07s ease;
+        width: 10rem;
+        text-align: center;
+        color: white;
+        background: rgba(211, 28, 28, 0.4);
+        text-shadow: 0 0 .5rem rgb(248, 248, 248);
+        height: 100px;
+        width: 50;
+      }
+      .playing {
+        transform: scale(1.1);
+        border-color: #ffc600;
+        box-shadow: 0 0 1rem #ffc600;
+      }
+      
+      kbd {
+        display: block;
+        font-size: 3rem;
+      }
+      .sound {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        color: #00ff9d;
+      }
