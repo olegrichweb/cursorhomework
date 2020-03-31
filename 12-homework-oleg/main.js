@@ -7,7 +7,7 @@ async function getPeoples5Ep () {
     let films = await axios.get(BASE + `films/2/`)
         const peopleUrlsArr = films.data.characters;
         const promises =  peopleUrlsArr.map( url => axios.get(url).then((people) => {
-            return people.data
+            return people.data.name
         }));
           return Promise.all(promises);
           

@@ -20,4 +20,4 @@ console.log(`Lol`)
 getRandomChinese(4).then((result) => {
     console.log(result)
 });
-document.writeln(`Result in the console`)
+document.writeln(`Look in the console`)
