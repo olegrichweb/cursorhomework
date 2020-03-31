@@ -37,7 +37,12 @@ function playSoundMous(e) {
     );
 };
 
-document.addEventListener(`click`, playSoundMous);
+Array.from (document.getElementsByClassName(`key`)).forEach((el) =>{
+    el.addEventListener(`click`, () => {
+        const keyCode = el.getAttribute(`data-key`);
+        return playSound({keyCode})
+    } )
+});
 
 function playSound (e) {
     const keY = document.querySelector(`.key[data-key="${e.keyCode}"]`);
