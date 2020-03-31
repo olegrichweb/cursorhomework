@@ -22,11 +22,14 @@
 function playSoundMous(e) {
     let keyId = document.querySelector(`.key[data-key]`);
     let suundId = document.querySelector(`audio[data-key]`);
-    if(keID === e){
+    if(keId === e){
     keyId = suundId;
     suundId.currentTime = 0;
-    suundId.play();
     };
+
+    suundId.play()
+
+    
     document.addEventListener(`play`, e => {
         if(sound && sound != e.target) {
             suundId.pause();
