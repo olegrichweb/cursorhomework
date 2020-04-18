@@ -110,7 +110,7 @@ homeButton.addEventListener(`click`, (event) => {
     container.innerHTML = ``;
     next.style.display = `none`;
     prev.style.display = `none`;
-    characters.style.display = `none`;
+    
 });
 
 
