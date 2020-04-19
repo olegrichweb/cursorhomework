@@ -1,7 +1,7 @@
 async function getRandomChinese (length) {
         let result = '';
         try {
-        const timeRes = 50*length;
+        const timeRes = 50;
     for (let i = 0; i < length; i++) {
         const promise = new Promise (resolve => {
                 setTimeout(() => {
